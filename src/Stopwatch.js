@@ -11,7 +11,7 @@ class Stopwatch extends Component {
       counterTime: 0
     }
   }
-  handleStart = (event)=> {
+  handleStart = ()=> {
     this.setState({
       counterOn: true,
       counterTime: this.state.counterTime,
@@ -39,10 +39,10 @@ class Stopwatch extends Component {
   //     console.log (seconds)
   //   }, 1000);
   // };
-  handlePause = (event) => {
+  handlePause = () => {
     this.setState({
-    timerOn: false});
-    clearInterval(this.counter)
+    counterOn: false});
+    clearInterval(this.timer)
   }
 
   // handleResume = () => {
@@ -52,7 +52,7 @@ class Stopwatch extends Component {
   //   },1000)
   // }
 
-  handleReset = (event) => {
+  handleReset = () => {
     this.setState({
     counterStart: 0,
     counterTime: 0
